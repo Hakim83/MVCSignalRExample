@@ -13,7 +13,7 @@ namespace MVCSignalRExample.DAL
         public void UpdateData(Foo foo)
         {
             data = foo;
-            RefreshHub.RefreshAll();
+            RefreshHub.Refresh();
         }
     }
 }

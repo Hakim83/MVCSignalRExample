@@ -11,13 +11,7 @@ namespace MVCSignalRExample
     public class RefreshHub : Hub
     {
         private static IHubContext hubContext = GlobalHost.ConnectionManager.GetHubContext<RefreshHub>();
-
-        public void Refresh()
-        {
-             Clients.All.refresh();
-        }
-
-        public static void RefreshAll()
+        public static void Refresh()
         {
             hubContext.Clients.All.refresh();
         }
